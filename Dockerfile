@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 
 RUN pip install poetry
-RUN poetry install
+RUN poetry install --no-root
 
-COPY toxic_comment_classification /app/toxic_comment_classification
+COPY toxic-detector /app/toxic-detector
 CMD ["poetry", "run", "train"]

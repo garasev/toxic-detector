@@ -1,0 +1,8 @@
+services:
+  toxic_comment_classification:
+    build: .
+    volumes:
+      - .:/app
+    command: ["python", "toxic-detector/train.py"]
+    environment:
+      - PYTHONUNBUFFERED=1

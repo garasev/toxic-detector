@@ -1,0 +1,22 @@
+hydra:
+  job:
+    chdir: false
+data:
+  train_file: 'data/train.csv'
+  test_file: 'data/test.csv'
+  test_labels_file: 'data/test_labels.csv'
+  output_file: 'data/sample_submission.csv'
+
+model:
+  model_name: 'bert-base-uncased'
+  num_labels: 6
+  lr: 2e-5
+  model_path: 'path/to/your/model.ckpt'
+
+trainer:
+  max_epochs: 3
+  gpus: 1
+
+mlflow:
+  tracking_uri: 'http://localhost:5000'
+  experiment_name: 'toxic_comment_classification'

@@ -1,0 +1,8 @@
+train.csv
+test_labels.csv
+test.csv
+outputs/
+.vscode/
+mlruns/
+
+*.pyc
